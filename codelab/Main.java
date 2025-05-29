@@ -97,20 +97,19 @@ class LogisticsGraph {
 
     // Metode main untuk Codelab
     public static void main(String[] args) {
-        int numWarehouses = 5; // A=0, B=1, C=2, D=3, E=4
+        int numWarehouses = 5; 
         LogisticsGraph logisticsGraph = new LogisticsGraph(numWarehouses);
 
-        // 1. Buatlah representasi Directed Graph untuk 5 gudang dengan total 7 jalur pengiriman.
         System.out.println("--- CODELAB: Implementasi Graph Perusahaan Logistik ---");
         System.out.println("Gudang dinomori 0(A) hingga 4(E).");
 
         logisticsGraph.addRoute(0, 1);
         logisticsGraph.addRoute(0, 2);
         logisticsGraph.addRoute(1, 3);
-        logisticsGraph.addRoute(2, 3); // C -> D
-        logisticsGraph.addRoute(2, 4); // C -> E
-        logisticsGraph.addRoute(3, 4); // D -> E
-        logisticsGraph.addRoute(4, 0); // E -> A (siklus)
+        logisticsGraph.addRoute(2, 3); 
+        logisticsGraph.addRoute(2, 4); 
+        logisticsGraph.addRoute(3, 4); 
+        logisticsGraph.addRoute(4, 0); 
 
         // Output: Tampilkan adjacency matrix
         logisticsGraph.printAdjacencyMatrix();
